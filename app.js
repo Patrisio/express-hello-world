@@ -4,6 +4,30 @@ const port = process.env.PORT || 3001;
 
 app.get("/", (req, res) => res.type('html').send(html));
 
+const myData = [
+  {
+    id: '1233221',
+    label: 'nahui',
+  },
+  {
+    id: '12335678221',
+    label: 'eblya',
+  },
+  {
+    id: '1233f6r7tg8h9221',
+    label: 'pizda',
+  },
+  {
+    id: '123buyvf67g8h903221',
+    label: 'Ryan Garcia',
+  },
+];
+
+app.get("/myData", (req, res) => res.send({
+  success: true,
+  data: myData
+}));
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
